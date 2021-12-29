@@ -14,6 +14,7 @@ const submitReview = (e) => {
     fetch("/api/nlp/s-analyzer", options)
         .then((res) => res.json())
         .then(({ analysis, unfilteredAnalysis, analysis2, analysis3 }) => {
+            // Use average score
             console.log("Unfiltered Score:", unfilteredAnalysis);
             console.log("Analysis1 Score:", analysis);
             console.log("Analysis2 Score:", analysis2.score);
