@@ -1,6 +1,8 @@
 var express = require("express");
 var path = require("path");
 
+var PORT = process.env.PORT || 3000;
+
 var indexRouter = require("./routes/index");
 var nlpRouter = require("./routes/nlp");
 var analyzerRoute = require("./routes/analyzer");
@@ -15,6 +17,6 @@ app.use("/", indexRouter);
 app.use("/api/nlp", nlpRouter);
 app.use("/api/analyzer", analyzerRoute);
 
-app.listen(3000);
+app.listen(PORT);
 
 module.exports = app;
